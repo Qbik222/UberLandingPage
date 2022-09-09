@@ -2,44 +2,49 @@
 @import "nullstyle";
 @import "mixin";
 
+body{
+
+
+    overflow-x: hidden;
+}
 header{
-position: relative;
-}
-.header__wrapper{
-    display: flex;
-    height: 50px;
-    background:  #212121;
-    justify-content: center;
-}
-nav{
 
-    max-width: 1140px;
-    width: 100vw;
-    padding: 12px calc(100%/35);
-    .menu{
+    .header__wrapper{
+ 
         display: flex;
-        
-        li{
-            border-right: 2px dotted black;
-            padding: 5px 28px;
-            
-
-        }
-        .menu__link{
-            font-size: 15px;
-            font-weight: 400;
-            font-style: normal;
-            font-family: Roboto-Light;
-           
-            
-           
-        }
-
+        height: 50px;
+        background:  #212121;
+        justify-content: center;
     }
-}
-
-
-
+    nav{
+        max-width: 1140px;
+        width: 100vw;
+        padding: 12px calc(100%/35);
+        .menu{
+            display: flex;
+            
+            li{
+                border-right: 2px dotted black;
+                padding: 5px 28px;
+                
+    
+            }
+            li:last-child{
+                border: none;
+            }
+            .menu__link{
+                font-size: 15px;
+                font-weight: 400;
+                font-style: normal;
+                font-family: Roboto-Light;
+               
+                
+               
+            }
+    
+        }
+    }
+    
 .subheader{
     position: absolute;
     width: 100%;
@@ -110,6 +115,7 @@ nav{
         
     }
 
+}
 }
 
 .promo{
@@ -195,8 +201,7 @@ nav{
         align-items: center;
 
             .advantages__header {
-
-                margin-bottom: 20px;
+                @include headerForSection;
             }
             .advantages__content {
                 display: flex;
@@ -204,10 +209,13 @@ nav{
             
                 .advantages__item {
                     display: flex;
-                    width: (100%/12 * 6);
+                    width: calc(100% /12 * 6);
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 50px;
+                    .advantages__key{
+                        width: 50%;
+                    }
                    
                     .adventeges__img {
                         display: flex;
@@ -224,8 +232,8 @@ nav{
                         
             
                             img{
-                            width: 70%;
-                            height: 50%;
+                            width: 65%;
+                            height: 55%;
                             }
                         
                     }
@@ -244,9 +252,197 @@ nav{
                 }
             }
     }
-
-       
-        
 }
 
 
+.mobileApp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/mobile_bg.jpg);
+    
+
+    .mobileApp__container {
+        display: flex;
+        flex-direction: column;
+         max-width: 1140px;
+         width: 100%;
+         margin-top: 50px;
+
+            .mobileApp__header {
+                @include headerForSection;
+                    p{
+                        font-family: Roboto-Regular;
+                        font-size: 17px;
+
+                    }
+                }   
+
+            .mobileApp__cardWrapper{
+                    display: flex;                    
+                    flex-wrap: wrap;
+                    gap: 67px;
+                    margin-bottom: 80px;
+
+                    .mobileApp__card {
+                        position: relative;
+                        display: flex;
+                        width: calc(100%/ 12 * 4);
+                        max-width: 320px;
+                        min-height: 300px;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+
+
+                        p{
+                            color: white;
+                            text-transform: uppercase;
+                            font-family: Roboto-Regular;
+                            font-size: 24px;
+                            text-align: center;
+                            margin-top: 34%;
+                        }
+
+                        .card__img {
+                            position: absolute;
+                            background: #000;
+                            height: 29px;
+                            width: 29px;
+                            border-radius: 20px;
+                            bottom: 35px;
+
+                                img{
+                                    position: relative;
+                                    transform: translateX(50%) translateY(50%);
+                                }
+
+                            }
+
+                        .card__img:hover{
+                            cursor: pointer;
+                            background: white;
+                            }
+                        }
+                }
+
+        }
+        
+        .uberX {
+            position: relative;
+            display: flex;
+            background: #070716;
+            width: 100vw;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 400px;
+            max-height: 500px;
+
+                .uberX__header {
+                    @include headerForSection;
+                    position: relative;
+                    top: 106px;
+                    h2{
+                        background: white;
+                        color: black;
+                    }
+                    h3{
+                        color: white;
+                    }
+                    p{
+                        color: white;
+                    }
+                }
+                .uberX__body {
+                    position: relative;
+                    top: 150px;
+                    
+                    p{
+                        color: #222222;
+                        text-align: center;
+                        font-size: 17px;
+
+
+                    }
+                }
+                
+            }
+            
+    }
+
+
+ .conditions {
+        margin-top: 68px;
+        @include flexColumnCenter;
+        align-items: center;
+        .conditions__header {
+            @include headerForSection;
+        }
+        .conditions__container {
+            @include flexColumnCenter;
+            max-width: 1140px;
+            width: 100%;
+       
+           
+            
+       
+            
+            .conditions__cards {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+               
+           
+                .conditions__list {
+                    width: calc(100% / 12 * 6);
+                    margin: 33px 0 0 0;
+                    
+                    h2{
+                        color: #1CA8C3;
+                        font-family: Roboto-Regular;
+                        font-size: 22px;
+                        margin-bottom: 16px;
+                        span{
+                            color:#ff5656;
+                            font-family: Roboto-Regular;
+                        }
+                        
+                    }
+                    p{
+                        font-family: Roboto-Light;
+                        font-size: 17px;
+                        color: #1CA8C3; 
+                        margin-top: 16px;
+                        line-height: 24px;
+
+                     }
+
+                    .conditions__item {
+                        display: flex;
+                        max-width: 550px;
+                        color: #222222;
+                        font-family: Roboto-Light;
+                        font-size: 17px;
+                        line-height: 24px;
+                        padding-left: 15px;
+                      
+                        .check{
+                            width: 33px;
+                            height: 22px;
+                            margin: 0 10px 0 0;
+                        }
+                       
+                        }
+                    }
+                }
+             }
+    }
+
+
+ 
+ 
+  

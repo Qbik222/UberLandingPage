@@ -20,7 +20,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-display: swap;
   src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
   font-weight: 700;
@@ -34,7 +34,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: Roboto-Bold;
+  font-family: Roboto;
   font-display: swap;
   src: url("../fonts/Roboto-BoldCondensed.woff2") format("woff2"), url("../fonts/Roboto-BoldCondensed.woff") format("woff");
   font-weight: 400;
@@ -172,37 +172,38 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-header {
-  position: relative;
+body {
+  overflow-x: hidden;
 }
 
-.header__wrapper {
+header .header__wrapper {
   display: flex;
   height: 50px;
   background: #212121;
   justify-content: center;
 }
-
-nav {
+header nav {
   max-width: 1140px;
   width: 100vw;
   padding: 12px 2.8571428571%;
 }
-nav .menu {
+header nav .menu {
   display: flex;
 }
-nav .menu li {
+header nav .menu li {
   border-right: 2px dotted black;
   padding: 5px 28px;
 }
-nav .menu .menu__link {
+header nav .menu li:last-child {
+  border: none;
+}
+header nav .menu .menu__link {
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
   font-family: Roboto-Light;
 }
-
-.subheader {
+header .subheader {
   position: absolute;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -211,50 +212,48 @@ nav .menu .menu__link {
   max-height: 84px;
   height: 100vh;
 }
-
-.subheader__container {
+header .subheader__container {
   display: flex;
   max-width: 1140px;
   width: 100vw;
   align-items: center;
 }
-.subheader__container .subheader__logo {
+header .subheader__container .subheader__logo {
   width: 33.3333333333%;
   margin: 18px 8.3333333333%;
 }
-.subheader__container .subheader__logo img {
+header .subheader__container .subheader__logo img {
   width: 73%;
 }
-.subheader__container .subheader__logo p {
+header .subheader__container .subheader__logo p {
   color: white;
   font-family: Roboto-Thin;
   margin: 0 0 0 16px;
   font-size: 13px;
   opacity: 0.7;
 }
-
-.subheader__call {
+header .subheader__call {
   display: flex;
   margin: 0 0 0 10%;
   gap: 32px;
 }
-.subheader__call .subheader__number {
+header .subheader__call .subheader__number {
   display: flex;
   flex-direction: column;
   color: white;
 }
-.subheader__call .subheader__number .number__text {
+header .subheader__call .subheader__number .number__text {
   margin-bottom: 4px;
   font-family: Roboto-Light;
   font-size: 12px;
   text-align: right;
 }
-.subheader__call .subheader__number .number__number {
+header .subheader__call .subheader__number .number__number {
   margin-bottom: 4px;
   font-family: Roboto-Regular;
   font-size: 22px;
 }
-.subheader__call .subheader__callback {
+header .subheader__call .subheader__callback {
   max-width: 172px;
   max-height: 46px;
   height: 100vh;
@@ -338,6 +337,33 @@ nav .menu .menu__link {
 }
 .Advantages .advantages__container .advantages__header {
   margin-bottom: 20px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Advantages .advantages__container .advantages__header h2 {
+  display: flex;
+  width: 115px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Roboto-Regular;
+  font-size: 11px;
+  line-height: 11px;
+  margin-bottom: 33px;
+}
+.Advantages .advantages__container .advantages__header h3 {
+  font-family: Roboto-Bold;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+  color: #222222;
+  text-transform: uppercase;
 }
 .Advantages .advantages__container .advantages__content {
   display: flex;
@@ -349,6 +375,9 @@ nav .menu .menu__link {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+}
+.Advantages .advantages__container .advantages__content .advantages__item .advantages__key {
+  width: 50%;
 }
 .Advantages .advantages__container .advantages__content .advantages__item .adventeges__img {
   display: flex;
@@ -364,8 +393,8 @@ nav .menu .menu__link {
   margin-right: 50px;
 }
 .Advantages .advantages__container .advantages__content .advantages__item .adventeges__img img {
-  width: 70%;
-  height: 50%;
+  width: 65%;
+  height: 55%;
 }
 .Advantages .advantages__container .advantages__content .advantages__item p {
   width: 60%;
@@ -377,4 +406,240 @@ nav .menu .menu__link {
   color: #1EACC7;
   font-family: Roboto;
   font-weight: 500;
+}
+
+.mobileApp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../../img/mobile_bg.jpg);
+}
+.mobileApp .mobileApp__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 50px;
+}
+.mobileApp .mobileApp__container .mobileApp__header {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobileApp .mobileApp__container .mobileApp__header h2 {
+  display: flex;
+  width: 115px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Roboto-Regular;
+  font-size: 11px;
+  line-height: 11px;
+  margin-bottom: 33px;
+}
+.mobileApp .mobileApp__container .mobileApp__header h3 {
+  font-family: Roboto-Bold;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+  color: #222222;
+  text-transform: uppercase;
+}
+.mobileApp .mobileApp__container .mobileApp__header p {
+  font-family: Roboto-Regular;
+  font-size: 17px;
+}
+.mobileApp .mobileApp__container .mobileApp__cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 67px;
+  margin-bottom: 80px;
+}
+.mobileApp .mobileApp__container .mobileApp__cardWrapper .mobileApp__card {
+  position: relative;
+  display: flex;
+  width: 33.3333333333%;
+  max-width: 320px;
+  min-height: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobileApp .mobileApp__container .mobileApp__cardWrapper .mobileApp__card p {
+  color: white;
+  text-transform: uppercase;
+  font-family: Roboto-Regular;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 34%;
+}
+.mobileApp .mobileApp__container .mobileApp__cardWrapper .mobileApp__card .card__img {
+  position: absolute;
+  background: #000;
+  height: 29px;
+  width: 29px;
+  border-radius: 20px;
+  bottom: 35px;
+}
+.mobileApp .mobileApp__container .mobileApp__cardWrapper .mobileApp__card .card__img img {
+  position: relative;
+  transform: translateX(50%) translateY(50%);
+}
+.mobileApp .mobileApp__container .mobileApp__cardWrapper .mobileApp__card .card__img:hover {
+  cursor: pointer;
+  background: white;
+}
+.mobileApp .uberX {
+  position: relative;
+  display: flex;
+  background: #070716;
+  width: 100vw;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 400px;
+  max-height: 500px;
+}
+.mobileApp .uberX .uberX__header {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 106px;
+}
+.mobileApp .uberX .uberX__header h2 {
+  display: flex;
+  width: 115px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Roboto-Regular;
+  font-size: 11px;
+  line-height: 11px;
+  margin-bottom: 33px;
+}
+.mobileApp .uberX .uberX__header h3 {
+  font-family: Roboto-Bold;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+  color: #222222;
+  text-transform: uppercase;
+}
+.mobileApp .uberX .uberX__header h2 {
+  background: white;
+  color: black;
+}
+.mobileApp .uberX .uberX__header h3 {
+  color: white;
+}
+.mobileApp .uberX .uberX__header p {
+  color: white;
+}
+.mobileApp .uberX .uberX__body {
+  position: relative;
+  top: 150px;
+}
+.mobileApp .uberX .uberX__body p {
+  color: #222222;
+  text-align: center;
+  font-size: 17px;
+}
+
+.conditions {
+  margin-top: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conditions .conditions__header {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conditions .conditions__header h2 {
+  display: flex;
+  width: 115px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Roboto-Regular;
+  font-size: 11px;
+  line-height: 11px;
+  margin-bottom: 33px;
+}
+.conditions .conditions__header h3 {
+  font-family: Roboto-Bold;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+  color: #222222;
+  text-transform: uppercase;
+}
+.conditions .conditions__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+}
+.conditions .conditions__container .conditions__cards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.conditions .conditions__container .conditions__cards .conditions__list {
+  width: 50%;
+  margin: 33px 0 0 0;
+}
+.conditions .conditions__container .conditions__cards .conditions__list h2 {
+  color: #1CA8C3;
+  font-family: Roboto-Regular;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+.conditions .conditions__container .conditions__cards .conditions__list h2 span {
+  color: #ff5656;
+  font-family: Roboto-Regular;
+}
+.conditions .conditions__container .conditions__cards .conditions__list p {
+  font-family: Roboto-Light;
+  font-size: 17px;
+  color: #1CA8C3;
+  margin-top: 16px;
+  line-height: 24px;
+}
+.conditions .conditions__container .conditions__cards .conditions__list .conditions__item {
+  display: flex;
+  max-width: 550px;
+  color: #222222;
+  font-family: Roboto-Light;
+  font-size: 17px;
+  line-height: 24px;
+  padding-left: 15px;
+}
+.conditions .conditions__container .conditions__cards .conditions__list .conditions__item .check {
+  width: 33px;
+  height: 22px;
+  margin: 0 10px 0 0;
 }
