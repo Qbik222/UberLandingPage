@@ -660,7 +660,7 @@ header .subheader__call .subheader__callback {
   flex-direction: column;
   flex-direction: column;
   align-items: center;
-  background: url(/../img/world_bg.png);
+  background: url(../img/world_bg.png);
   max-width: 1440px;
   width: 100%;
   min-height: 715px;
