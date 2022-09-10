@@ -153,42 +153,42 @@ function addMobileAppCard (src, bgSrc, alt, title, parentSelector){
 
 addMobileAppCard(
     "./img/Plus.png",
-    "url(../img/mobileAppCard1.png) center/cover no-repeat",
+    "url(./img/mobileAppCard1.png) center/cover no-repeat",
     "plus button",
     "оформление заказа одним касанием",
     ".mobileApp__cardWrapper"
 );
 addMobileAppCard(
     "./img/Plus.png",
-    "url(../img/mobileAppCard2.png) center/cover no-repeat",
+    "url(./img/mobileAppCard2.png) center/cover no-repeat",
     "plus button",
     "надежная подача",
     ".mobileApp__cardWrapper"
 );
 addMobileAppCard(
     "./img/Plus.png",
-    "url(../img/mobileAppCard3.png) center/cover no-repeat",
+    "url(./img/mobileAppCard3.png) center/cover no-repeat",
     "plus button",
     "прозрачные цены",
     ".mobileApp__cardWrapper"
 );
 addMobileAppCard(
     "./img/Plus.png",
-    "url(../img/mobileAppCard4.png) center/cover no-repeat",
+    "url(./img/mobileAppCard4.png) center/cover no-repeat",
     "plus button",
     "безналичная оплата",
     ".mobileApp__cardWrapper"
 );
 addMobileAppCard(
     "./img/Plus.png",
-    "url(../img/mobileAppCard5.png) center/cover no-repeat",
+    "url(img/mobileAppCard5.png) center/cover no-repeat",
     "plus button",
     "обратная связь",
     ".mobileApp__cardWrapper"
 );
 addMobileAppCard(
     "./img/Plus.png",
-    "url(../img/mobileAppCard6.png) center/cover no-repeat",
+    "url(./img/mobileAppCard6.png) center/cover no-repeat",
     "plus button",
     "разделить стоимость поездки",
     ".mobileApp__cardWrapper"

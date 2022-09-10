@@ -11,7 +11,7 @@ export const html = () => {
             }))
             )
         .pipe(fileInclude())
-        .pipe(global.app.plugins.replace(/img\//g,'../img/'))
+        // .pipe(global.app.plugins.replace(/img\//g,'../img/'))
         .pipe(global.app.plugins.if(
             global.app.isBuild,
             webpHtmlNosvg(),
