@@ -176,11 +176,18 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  margin-top: 50px;
+}
 header .header__wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 5;
   display: flex;
   height: 50px;
   background: #212121;
   justify-content: center;
+  width: 100%;
 }
 header nav {
   max-width: 1140px;
@@ -767,5 +774,65 @@ footer .footer__socialMedia #linkedin svg {
 footer nav {
   display: flex;
   flex-direction: column;
-  width: 33.3333333333%;
+  justify-content: center;
+  align-items: center;
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 44px;
+  margin-bottom: 38px;
+}
+footer nav .pageNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+}
+footer nav .pageNav li a {
+  color: #070716;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: Roboto-Light;
+}
+footer nav .contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 395px;
+  width: 100%;
+}
+footer nav .contacts li a {
+  color: #999999;
+  font-family: Roboto-Light;
+  font-size: 11px;
+  line-height: 37px;
+}
+footer nav button {
+  background: white;
+  color: #1fbad6;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: Roboto-Regular;
+}
+footer .download {
+  display: flex;
+  margin-right: 26px;
+}
+footer .download svg {
+  max-width: 200px;
+  max-height: 60px;
+}
+footer .download #appstore {
+  margin-top: 5px;
+  width: 125px;
+}
+footer .download #googleplay {
+  margin-top: 5px;
+  width: 145px;
+}
+footer .download #microsoftstore {
+  margin-top: 11px;
+  padding-top: 5px;
+  width: 120px;
+  height: 44px;
 }
