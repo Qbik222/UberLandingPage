@@ -774,7 +774,6 @@ footer .footer__socialMedia #linkedin svg {
 footer nav {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   justify-content: center;
   align-items: center;
   max-width: 1140px;
@@ -837,7 +836,3 @@ footer .download #microsoftstore {
   width: 120px;
   height: 44px;
 }
-=======
-  width: 33.3333333333%;
-}
->>>>>>> e8b14a12a77665781e9de2cd1ce1ee00b99da58a
