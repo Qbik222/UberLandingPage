@@ -33,6 +33,277 @@
 @mixin flexColumnCenter {
     display: flex;
     flex-direction: column;
-    // align-items: center;
+
 
 }
+
+@mixin Media{
+    @media(max-width: 1100px){
+
+        header{
+    
+            nav{
+            
+                .menu{
+                 
+                    justify-content: center;
+                    li{
+                        padding: 5px 20px;
+                    }
+                  }
+              }
+          }
+        .mobileApp__container{
+            .mobileApp__cardWrapper{
+                gap: 30px;
+                justify-content: center
+            }
+        }
+        .conditions__cards{
+            padding:  10px;
+        }
+        footer{
+            .footer__socialMedia{
+                margin-left: 14px;
+                width: auto;
+                .social__block{
+                    height: 27px;
+                    width: 27px;
+                    
+                }
+                #instagram{
+                    svg{
+                        padding-left: 21%;
+                        padding-top: 22%;
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
+                #facebook{
+                    svg{
+                        padding-left: 15%;
+                        padding-top: 20%;
+                        height: 22px;
+                        width: 25px;
+                    }
+                }
+                #twitter{
+                    svg{
+                        padding-left: 17%;
+                        padding-top: 22%;
+                        height: 24px;
+                        width: 24px;
+                    }
+              
+                }
+                #linkedin{
+                    svg{
+                        padding-left: 25%;
+                        padding-top: 25%;
+                        height: 35px;
+                        width: 35px;
+                    }
+               
+                }
+            }
+            .download{
+                flex-direction: column;
+                margin-right: 14px;
+                svg{
+                
+                    max-width: 200px;
+                    max-height: 50px;
+                }
+                #appstore{
+                    margin-top: 0;
+                    padding-left: 8px;
+                    width: 107px;
+
+                }
+                #googleplay{
+                    margin-top: 0;
+                    width: 135px; 
+                    padding-right: 20px; 
+                }
+                #microsoftstore{
+                    margin-top: 0;
+                    padding-top: 0;
+                    padding-left: 5px;
+                    width: 110px;
+                    height: 44px;
+                }
+        
+            }
+            
+        }
+        .adventeges__img{
+            margin-right: 40px !important;
+            }
+        
+    }
+    @media(max-width: 980px){
+        header{
+    
+            nav{
+            
+                .menu{
+                 
+                    justify-content: center;
+                    li{
+                        padding: 5px 15px;
+                    }
+                    .menu__link{
+
+                      font-size: 13px;
+                    }
+                  
+                  }
+              }
+            .subheader__call{
+                margin: auto;
+            }
+          }
+          .adventeges__img{
+            margin-right: 30px !important;
+            }
+       
+            
+    }
+    @media(max-width: 820px){
+        header{
+    
+            nav{
+            
+                .menu{
+                 
+                    justify-content: center;
+                    li{
+                        padding: 5px 10px;
+                    }
+                  }
+              }
+          }
+          .mobileApp__header {
+            @include headerForSection;
+                p{
+                    font-family: Roboto-Regular;
+                    font-size: 15px !important;
+
+                }
+            }   
+
+    }
+    @media(max-width: 776px) {
+        header{
+    
+            nav{
+            
+                .menu{
+                 
+                    justify-content: center;
+                    li{
+                        padding: 5px 20px;
+                    }
+                  }
+            }
+              
+            .subheader__container{
+
+
+                .subheader__logo{
+                    margin: 15px 45px;
+                    img{
+                
+                    }
+                    p{
+                     
+                    }
+                }
+                
+            }
+            .subheader__call{
+                padding: 0 10px;
+                .subheader__number {
+                
+                    .number__text {
+                        font-size: 12px;
+                    }
+                    .number__number {
+                        font-size: 18px;
+                    }
+                }
+                
+                .subheader__callback {
+                    max-width: 150px;
+                    max-height: 35px;
+                    font-size: 14px;
+                }
+
+            }
+        }
+        .promo{
+            min-height: 500px;
+        }
+        .promo__container{
+            margin: 0 !important;
+            margin-top: 129px !important;
+            padding: 0 14px;
+            .promo__content{
+                margin: 0 !important;
+                flex-direction: column;
+                align-items: center;
+                width: 100% !important;
+                h1{
+                    font-size: 65px !important;
+                    width: 70%;
+                }
+                h2{
+                    font-size: 40px !important;
+                    margin-top: 40px;
+                    
+    
+                }
+            }
+      
+        }
+        .promo__descr{
+            display: none;
+        }
+        .promo__btn{
+            margin: 78px 0 35px 0 !important;
+        }
+        .advantages__container{
+            flex-direction: column !important;
+            
+          
+        }
+        .advantages__item{
+            flex-wrap: nowrap;
+            flex-direction: column !important;
+            width: 100% !important;
+            margin: 0 !important;
+            min-height: 300px;
+            gap: 25px;
+            p{
+                width: 50% !important;
+            }
+        }
+        .mobileApp__container{
+           
+            .mobileApp__cardWrapper{
+                display: flex !important;
+                gap: 20px !important;
+                padding: 0 10px;
+            
+                align-items: center;
+                width: 100% !important;
+                
+                .mobileApp__card{
+                    width: 100% !important;
+                }
+
+            }
+        }
+    }
+        
+    }
