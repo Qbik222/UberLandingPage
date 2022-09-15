@@ -25,12 +25,14 @@ header{
         width: 100%;
     }
     nav{
-     
+        position: relative;
         max-width: 1140px;
         width: 100vw;
         padding: 12px calc(100%/35);
         .menu{
+            position: relative;
             display: flex;
+            transition: all 0.3s ease 0s;
             
             li{
                 border-right: 2px dotted black;
@@ -53,7 +55,83 @@ header{
     
         }
     }
+    .menu__burger{
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 30px;
+        height: 16px;
+        span{
+            display: block;
+                border-top: 2px solid white;
+                margin-top: 5px;
+        }
+        transition: all 0.3s ease 0s;
+    }
+    .menu__burger::before{  
     
+      
+        display: block;
+        content: "";
+        background: white;
+        border-top: 2px solid white;
+        transition: all 0.3s ease 0s;
+        transform: rotate(0);
+    
+    }
+    .menu__burger::after{
+    
+
+        display: block;
+        content: "";
+        border-bottom: 2px solid white;
+        margin-top: 4px;
+        transition: all 0.3s ease 0s;
+        transform: rotate(0);
+    }
+
+
+
+    //////////////
+    .active__burger{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        width: 27px;
+        height: 16px;
+
+            span{
+                display: none;
+              
+            }
+    }
+    .active__burger::before{
+        position: relative;
+        top: 6px;
+        display: block;
+        content: "";
+        border-top: 2px solid white;
+        margin-top: 4px;
+        transition: all 0.3s ease 0s;
+        transform: rotate(45deg);
+    }
+    .active__burger::after{
+        display: block;
+        content: "";
+        border-bottom: 2px solid white;
+        margin-top: 4px;
+        transform: rotate(135deg);
+        transition: all 0.3s ease 0s;
+    }
+    /////////////////////////
+
+
+    ///////////////////////
+   
+ 
+
 .subheader{
     position: absolute;
     width: 100%;

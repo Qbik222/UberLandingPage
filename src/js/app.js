@@ -194,5 +194,26 @@ addMobileAppCard(
     ".mobileApp__cardWrapper"
 );
 
+
+
+const burgerMenu = document.querySelector(".menu__burger");
+const activeBurger = document.querySelector(".menu");
+const navBtn = document.querySelectorAll(".menu__link");
+
+burgerMenu.addEventListener("click", (e) =>{
+    console.log(e.target);
+    burgerMenu.classList.toggle("active__burger");
+    activeBurger.classList.toggle("menu__active");
+    document.querySelector("body").classList.toggle("lock");
+   
+});
+navBtn.forEach(btn =>{
+    btn.addEventListener("click", () =>{
+        burgerMenu.classList.toggle("active__burger");
+        activeBurger.classList.toggle("menu__active");
+        document.querySelector("body").classList.toggle("lock");
+    });
+});
+
 });
 
